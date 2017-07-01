@@ -169,7 +169,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
     sync (0.4.0)
       em-http-request
     thin (1.7.1)
@@ -208,14 +207,13 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pg (= 0.18.4)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   rb-readline
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   sync
   thin
   turbolinks (~> 5)
