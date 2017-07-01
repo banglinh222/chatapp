@@ -27,8 +27,8 @@ test:
   async: false
 
 production:
-  server: "http://mysync.herokuapp.com/faye"
-  adapter_javascript_url: "http://mysync.herokuapp.com/faye/faye.js"
+  server: "https://mysync.herokuapp.com/faye"
+  adapter_javascript_url: "https://mysync.herokuapp.com/faye/faye.js"
   adapter: "Faye"
   auth_token: "df5bb54a868535e7c83588ac1f3aeb79afc5043b8db4eb85df6ac68f643fe961"
   async: true
