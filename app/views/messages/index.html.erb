@@ -1,6 +1,7 @@
+<%= javascript_include_tag 'custom', 'data-turbolinks-track': 'reload' %>
 <p id="notice"><%= notice %></p>
 
-<h1>Messages</h1>
+<h1>Neko chat</h1>
 <%= sync partial: 'message_row', collection: @messages %>
 <%= sync_new partial: 'message_row', resource: Message.new %>
 
