@@ -15,7 +15,12 @@
 <%end%>
 <br>
 <%else%>
+<%if message.user.id==Message.find_by(id:message.id-1).user.id%>
 <%=message.body%>
+<%else%>
+	<h2><%=message.user.name%></h2>
+	<hr> 
+	<%=message.body%>
 <%end%>
-
+<%end%>
 </div>
