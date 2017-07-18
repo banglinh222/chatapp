@@ -1,4 +1,16 @@
 <div>
-<%=message.body%>
+<%if !@messages.find_by(id:message.id-1).nil? %>
+	<%if @messages.find_by(id:message.id-1).user.name == message.user.name%>
+		<%=message.body%>
+	<%else%>
+		<h2><%=message.user.name%></h2>
+		<hr> 
+		<%=message.body%>
+	<%end%>
+<%else%>
+	<h2><%=message.user.name%></h2>
+	<hr>
+	<%=message.body%>
+<%end%>
 <br>
 </div>
