@@ -1,7 +1,8 @@
 <%if !Message.find_by(id:message.id-1).nil?%>
 	<%if Message.find_by(id:message.id-1).user == message.user%>
 		<div class="<%='right' if current_user==message.user%>">
-		<%=message.body%></div>
+			<%=message.body%>	
+		</div>
 	<%else%>
 		<div class="<%='right' if current_user==message.user%>">
 			<h2><%=message.user.name%></h2>
