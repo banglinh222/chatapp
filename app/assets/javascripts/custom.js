@@ -9,4 +9,3 @@
     element.scrollTop = element.scrollHeight;
 }
 
-
