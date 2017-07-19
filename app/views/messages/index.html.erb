@@ -5,8 +5,8 @@
 <h1>Neko chat</h1>
 <br>
 <div class="container" id="container">
-<%= sync partial: 'message_row', collection: @messages, refetch: true %>
-<%= sync_new partial: 'message_row', resource: Message.new, refetch: true %>
+<%= sync partial: 'message_row', collection: @messages%>
+<%= sync_new partial: 'message_row', resource: Message.new%>
 
 </div>
 <br>
