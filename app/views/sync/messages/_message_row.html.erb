@@ -1,32 +1,34 @@
-<div>
 <%if !@messages.nil?%>
 <%if !@messages.find_by(id:message.id-1).nil? %>
 	<%if @messages.find_by(id:message.id-1).user.name == message.user.name%>
-		<%=message.body%>
+		<div class="<%='right' if current_user==message.user%>"><%=message.body%></div>
 	<%else%>
-		<h2><%=message.user.name%></h2>
-		<hr> 
-		<%=message.body%>
+		<div class="<%='right' if current_user==message.user%>">
+			<h2><%=message.user.name%></h2>
+			<%=message.body%>
+		</div>
 	<%end%>
 <%else%>
+	<div class="<%='right' if current_user==message.user%>">
 	<h2><%=message.user.name%></h2>
-	<hr>
 	<%=message.body%>
+	</div>
 <%end%>
 <br>
 <%else%>
 <%if !Message.find_by(id:message.id-1).nil?%>
 <%if message.user.id==Message.find_by(id:message.id-1).user.id%>
-<%=message.body%>
+		<div class="<%='right' if current_user==message.user%>"><%=message.body%></div>
 <%else%>
-	<h2><%=message.user.name%></h2>
-	<hr> 
-	<%=message.body%>
+	<div class="<%='right' if current_user==message.user%>">
+			<h2><%=message.user.name%></h2>
+			<%=message.body%>
+	</div>
 <%end%>
 <%else%>
-<h2><%=message.user.name%></h2>
-	<hr> 
-	<%=message.body%>
+	<div class="<%='right' if current_user==message.user%>">
+			<h2><%=message.user.name%></h2>
+			<%=message.body%>
+	</div>
 <%end%>
 <%end%>
-</div>

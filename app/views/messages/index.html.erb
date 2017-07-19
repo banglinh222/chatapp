@@ -1,11 +1,14 @@
 <%= javascript_include_tag 'custom', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "messages", "data-turbolinks-track" => "reload" %>
 <p id="notice"><%= notice %></p>
 
 <h1>Neko chat</h1>
 <br>
+<div class="container" id="container">
 <%= sync partial: 'message_row', collection: @messages %>
 <%= sync_new partial: 'message_row', resource: Message.new %>
 
+</div>
 <br>
 
 <%= form_for @new_message, remote: true do |f| %>

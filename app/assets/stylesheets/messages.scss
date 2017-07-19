@@ -1,3 +1,27 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+	text-align: center;
+}
+.container {
+	position: relative;
+	width: 50%;
+	height: 500px;
+	margin: auto;
+	overflow-y: scroll;
+	padding: 10px;
+	}
+.container::-webkit-scrollbar { 
+display: none;  // Safari and Chrome
+}
+.right {
+	text-align: right;
+}
+.new_message{
+	width: 50%;
+	margin: auto;
+}
+#message_body {
+	width: 100%;
+}

@@ -1,5 +1,11 @@
         $(document).ready(function(){
-        	console.log("alo")
+        	updateScroll();
+        	console.log("alo");
         	$("#new_message").bind("ajax:complete", function(event,xhr,status){
-  $("#message_body").val('');
+  $("#message_body").val('');updateScroll();
 });})
+
+    function updateScroll(){
+    var element = document.getElementById("container");
+    element.scrollTop = element.scrollHeight;
+}
