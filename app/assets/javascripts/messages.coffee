@@ -9,4 +9,6 @@ class Sync.MessageRow extends Sync.View
     $el.hide()
     @insert($el)
 
-  afterInsert: -> @$el.fadeIn 'slow'
+  afterInsert: ->
+    @$el.fadeIn 'slow'
+    updateScroll
