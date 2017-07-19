@@ -5,6 +5,7 @@
 <h1>Neko chat</h1>
 <br>
 <div class="container" id="container">
+<%=current_user.name%>
 <%= sync partial: 'message_row', collection: @messages %>
 <%= sync_new partial: 'message_row', resource: Message.new %>
 
