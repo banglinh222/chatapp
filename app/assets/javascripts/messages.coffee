@@ -11,4 +11,4 @@ class Sync.MessageRow extends Sync.View
 
   afterInsert: ->
     @$el.fadeIn 'slow'
-    updateScroll
+    updateScroll()
