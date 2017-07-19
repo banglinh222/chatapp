@@ -17,6 +17,7 @@
 <br>
 <%else%>
 <%if !Message.find_by(id:message.id-1).nil?%>
+<%=current_user.name%>
 <%if message.user.id==Message.find_by(id:message.id-1).user.id%>
 		<div class="<%='right' if current_user==message.user%>"><%=message.body%></div>
 <%else%>
@@ -26,6 +27,7 @@
 	</div>
 <%end%>
 <%else%>
+<%=current_user.name%>
 	<div class="<%='right' if current_user==message.user%>">
 			<h2><%=message.user.name%></h2>
 			<%=message.body%>
