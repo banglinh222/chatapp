@@ -1,6 +1,5 @@
         $(document).ready(function(){
         	updateScroll();
-        	console.log("alo");
         	$("#new_message").bind("ajax:complete", function(event,xhr,status){
   $("#message_body").val('');updateScroll();
 });})
@@ -9,3 +8,5 @@
     var element = document.getElementById("container");
     element.scrollTop = element.scrollHeight;
 }
+
+
