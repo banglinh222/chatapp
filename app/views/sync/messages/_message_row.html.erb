@@ -1,7 +1,7 @@
-<%if !@messages.nil?%>
-<%if !@messages.find_by(id:message.id-1).nil? %>
-	<%if @messages.find_by(id:message.id-1).user.name == message.user.name%>
-		<div class="<%='right' if current_user==message.user%>"><%=message.body%></div>
+<%if !Message.find_by(id:message.id-1).nil?%>
+	<%if Message.find_by(id:message.id-1).user == message.user%>
+		<div class="<%='right' if current_user==message.user%>">
+		<%=message.body%></div>
 	<%else%>
 		<div class="<%='right' if current_user==message.user%>">
 			<h2><%=message.user.name%></h2>
@@ -10,9 +10,8 @@
 	<%end%>
 <%else%>
 	<div class="<%='right' if current_user==message.user%>">
-	<h2><%=message.user.name%></h2>
-	<%=message.body%>
+		<h2><%=message.user.name%></h2>
+		<%=message.body%>
 	</div>
-<%end%>
 <%end%>
 <br>
