@@ -12,5 +12,6 @@
 <br>
 
 <%= form_for @new_message, remote: true do |f| %>
-    <%= f.text_field :body %>
+<%= f.text_field :body %>
+<%= f.submit "meow"%>
 <% end %>
